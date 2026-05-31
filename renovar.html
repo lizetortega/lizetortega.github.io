@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Renovar Membresía</title>
+  <meta name="facebook-domain-verification" content="ul7gfyq0zhtmbrxm05u4crbffxt412" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #151f32;
+      --border: #243049;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --accent: #14b8a6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Inter", system-ui, sans-serif;
+      background: radial-gradient(800px 400px at 50% -10%, rgba(20,184,166,0.15), transparent 60%), var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+    .card {
+      width: min(480px, 100%);
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2.5rem;
+      text-align: center;
+    }
+    h1 { font-size: 1.75rem; font-weight: 800; margin-bottom: 0.75rem; }
+    p { color: var(--muted); margin-bottom: 1.5rem; line-height: 1.6; }
+    a {
+      display: inline-block;
+      padding: 0.85rem 1.5rem;
+      background: var(--accent);
+      color: #042f2e;
+      font-weight: 700;
+      border-radius: 12px;
+      text-decoration: none;
+      margin: 0.25rem;
+    }
+    a.secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .links { margin-top: 1.5rem; font-size: 0.9rem; }
+    .links a { background: none; color: var(--accent); padding: 0; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Renovar o completar pago</h1>
+    <p>Si ya tienes cuenta de proveedor, renueva tu membresía mensual de <strong style="color:#f1f5f9;">$500.00 MXN</strong>.</p>
+    <p>Próximamente podrás pagar en línea. Contáctanos para renovar tu acceso.</p>
+    <a href="index.html">Volver al inicio</a>
+    <a class="secondary" href="registro.html">Nuevo registro</a>
+    <p class="links"><a href="index.html">← Ver membresía completa</a></p>
+  </div>
+</body>
+</html>

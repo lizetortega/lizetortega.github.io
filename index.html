@@ -3,144 +3,513 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AgendaT — lizetortega.github.io</title>
-  <!-- Meta Business Suite > Dominios: sustituye YOUR_META_VERIFICATION_CODE por el código que te da Meta -->
+  <title>Membresía para Proveedores — Consigue más clientes</title>
   <meta name="facebook-domain-verification" content="ul7gfyq0zhtmbrxm05u4crbffxt412" />
-  <meta name="description" content="Sitio en lizetortega.github.io para verificación de dominio con Meta Business Suite.">
+  <meta name="description" content="Recibe prospectos y citas con clientes por solo $500 MXN al mes. Nosotros conseguimos los clientes, tú te enfocas en atenderlos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0c1117;
-      --card: #151b24;
-      --border: #263041;
-      --text: #e6edf3;
-      --muted: #8b9cb3;
-      --accent: #2d7ff9;
-      --accent-dim: #1f5fcc;
-      --ok: #3fb950;
+      --bg: #0b1220;
+      --bg-soft: #111827;
+      --card: #151f32;
+      --card-hover: #1a2740;
+      --border: #243049;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --accent: #14b8a6;
+      --accent-dark: #0d9488;
+      --accent-glow: rgba(20, 184, 166, 0.15);
+      --gold: #fbbf24;
     }
-    * { box-sizing: border-box; }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
     body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
-      background: radial-gradient(1200px 600px at 20% -10%, #1a2744 0%, var(--bg) 55%);
+      font-family: "Inter", system-ui, sans-serif;
+      background: var(--bg);
       color: var(--text);
       line-height: 1.6;
     }
-    main {
-      max-width: 640px;
+
+    .container {
+      width: min(1120px, 92%);
       margin: 0 auto;
-      padding: clamp(2rem, 5vw, 3.5rem) 1.25rem 4rem;
     }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: clamp(1.5rem, 4vw, 2.25rem);
-      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      background: rgba(11, 18, 32, 0.85);
+      border-bottom: 1px solid var(--border);
     }
-    h1 {
-      margin: 0 0 0.35rem;
-      font-size: clamp(1.75rem, 4vw, 2.25rem);
-      font-weight: 700;
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-weight: 800;
+      font-size: 1.1rem;
       letter-spacing: -0.02em;
-    }
-    .url-pill {
-      display: inline-block;
-      font-family: ui-monospace, monospace;
-      font-size: 0.9rem;
-      background: var(--bg);
-      border: 1px solid var(--border);
-      padding: 0.35rem 0.65rem;
-      border-radius: 8px;
-      margin-bottom: 1rem;
       color: var(--text);
+      text-decoration: none;
     }
-    .badge {
+
+    .brand span { color: var(--accent); }
+
+    .nav-cta {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
+      padding: 0.65rem 1.25rem;
+      background: var(--accent);
+      color: #042f2e;
+      font-weight: 700;
+      font-size: 0.9rem;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: transform 0.15s, background 0.15s;
+      white-space: nowrap;
+    }
+
+    .nav-cta:hover {
+      background: #2dd4bf;
+      transform: translateY(-1px);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 4.5rem 0 3rem;
+      background:
+        radial-gradient(900px 500px at 10% -5%, rgba(20, 184, 166, 0.18), transparent 55%),
+        radial-gradient(700px 400px at 90% 0%, rgba(59, 130, 246, 0.1), transparent 50%),
+        var(--bg);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
       font-size: 0.8rem;
       font-weight: 600;
-      color: var(--ok);
-      background: rgba(63, 185, 80, 0.12);
-      border: 1px solid rgba(63, 185, 80, 0.35);
-      padding: 0.25rem 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      background: var(--accent-glow);
+      border: 1px solid rgba(20, 184, 166, 0.35);
+      padding: 0.35rem 0.85rem;
       border-radius: 999px;
       margin-bottom: 1.25rem;
     }
-    .badge::before {
-      content: "";
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--ok);
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.25rem;
     }
-    p { margin: 0 0 1rem; color: var(--muted); }
-    p:last-child { margin-bottom: 0; }
-    a {
+
+    .hero h1 em {
+      font-style: normal;
       color: var(--accent);
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.15s, color 0.15s;
     }
-    a:hover {
-      color: #5c9dff;
-      border-bottom-color: #5c9dff;
+
+    .hero-lead {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 540px;
+      margin-bottom: 1rem;
     }
-    .actions {
+
+    .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-top: 1.5rem;
+      gap: 0.85rem;
+      margin-top: 2rem;
     }
+
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 0.65rem 1.1rem;
-      border-radius: 10px;
-      font-weight: 600;
+      padding: 0.85rem 1.5rem;
+      border-radius: 12px;
+      font-weight: 700;
       font-size: 0.95rem;
-      border: 1px solid var(--border);
-      background: var(--bg);
-      color: var(--text);
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+      border: 1px solid transparent;
     }
+
+    .btn:hover { transform: translateY(-2px); }
+
     .btn-primary {
-      background: linear-gradient(180deg, var(--accent) 0%, var(--accent-dim) 100%);
-      border-color: #2563c8;
-      color: #fff;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+      color: #042f2e;
+      box-shadow: 0 8px 24px rgba(20, 184, 166, 0.25);
     }
-    .btn-primary:hover { filter: brightness(1.08); }
-    footer {
-      margin-top: 2rem;
+
+    .btn-primary:hover {
+      box-shadow: 0 12px 32px rgba(20, 184, 166, 0.35);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border-color: var(--border);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .price-card {
+      background: linear-gradient(160deg, var(--card) 0%, #0f172a 100%);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+    }
+
+    .price-label {
       font-size: 0.85rem;
+      font-weight: 600;
       color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .price-amount {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1;
+      margin: 0.5rem 0 0.25rem;
+      letter-spacing: -0.03em;
+    }
+
+    .price-amount small {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .price-note {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-top: 0.75rem;
+    }
+
+    .price-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 1.25rem;
+      padding: 0.5rem 0.85rem;
+      background: rgba(251, 191, 36, 0.12);
+      border: 1px solid rgba(251, 191, 36, 0.35);
+      border-radius: 8px;
+      color: var(--gold);
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    /* Sections */
+    section { padding: 4.5rem 0; }
+
+    section:nth-child(even) {
+      background: var(--bg-soft);
+    }
+
+    .section-head {
       text-align: center;
+      max-width: 640px;
+      margin: 0 auto 3rem;
+    }
+
+    .section-head h2 {
+      font-size: clamp(1.6rem, 3vw, 2.25rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    /* Benefits */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .benefit {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .benefit:hover {
+      border-color: rgba(20, 184, 166, 0.4);
+      background: var(--card-hover);
+    }
+
+    .benefit-icon {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .benefit h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+      line-height: 1.4;
+    }
+
+    /* Value prop */
+    .value-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .value-text h2 {
+      font-size: clamp(1.6rem, 3vw, 2.1rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    .value-text p {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .value-visual {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2.5rem;
+      text-align: center;
+    }
+
+    .value-visual .stat {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .value-visual .stat-label {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+
+    .value-divider {
+      height: 1px;
+      background: var(--border);
+      margin: 1.5rem 0;
+    }
+
+    /* Offer */
+    .offer-box {
+      background: linear-gradient(135deg, rgba(20, 184, 166, 0.12) 0%, rgba(20, 184, 166, 0.04) 100%);
+      border: 1px solid rgba(20, 184, 166, 0.35);
+      border-radius: 20px;
+      padding: 2.5rem;
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .offer-box h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .offer-price {
+      font-size: 2rem;
+      font-weight: 800;
+      margin: 0.75rem 0;
+    }
+
+    .offer-box p {
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
+    /* Renew */
+    .renew {
+      text-align: center;
+      padding: 2rem 0 0;
+    }
+
+    .renew a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+
+    .renew a:hover { border-bottom-color: var(--accent); }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.875rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero-grid,
+      .value-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero { padding-top: 2.5rem; }
+
+      .price-card { order: -1; }
     }
   </style>
 </head>
 <body>
-  <main>
-    <div class="card">
-      <div class="badge">Sitio de usuario de GitHub Pages</div>
-      <div class="url-pill">https://lizetortega.github.io</div>
-      <h1>AgendaT</h1>
-      <p>
-        Esta página se publica desde el repositorio <strong>lizetortega.github.io</strong>.
-        Es la URL de usuario de GitHub (sin subruta), adecuada para registrar en
-        <strong>Meta Business Suite → Dominios</strong> como <code>lizetortega.github.io</code>.
-      </p>
-      <p>
-        Proyecto:
-        <a href="https://github.com/lizetortega/AgendaT" rel="noopener noreferrer">github.com/lizetortega/AgendaT</a>
-      </p>
-      <div class="actions">
-        <a class="btn btn-primary" href="https://business.facebook.com/latest/settings/domains/" rel="noopener noreferrer">Dominios en Meta</a>
-        <a class="btn" href="https://docs.github.com/es/pages/getting-started-with-github-pages/about-github-pages#types-of-github-pages-sites" rel="noopener noreferrer">Tipos de sitios en Pages</a>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#">Proveedores<span>+</span></a>
+      <a class="nav-cta" href="#registro">Registrarme</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Membresía para proveedores</span>
+        <h1>Consigue más clientes por solo <em>$500.00</em> al mes</h1>
+        <p class="hero-lead">
+          ¿Eres un profesional que busca más clientes sin invertir tiempo en publicidad o marketing?
+        </p>
+        <p class="hero-lead">
+          Al registrarte en nuestra plataforma por solo <strong style="color: var(--text);">$500.00 MXN al mes</strong>,
+          comenzarás a recibir solicitudes de clientes interesados en contratar tus servicios. Todo el proceso se
+          realiza de forma digital a través de nuestra plataforma web, facilitando la comunicación y gestión de
+          oportunidades.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#registro">Empieza hoy mismo</a>
+          <a class="btn btn-secondary" href="#beneficios">Ver beneficios</a>
+        </div>
+      </div>
+
+      <aside class="price-card">
+        <p class="price-label">Membresía mensual</p>
+        <p class="price-amount">$500<small>.00 MXN</small></p>
+        <p class="price-note">Recibe prospectos, citas y visibilidad sin invertir en publicidad propia.</p>
+        <span class="price-badge">Oferta de lanzamiento — primer mes $500.00 MXN</span>
+      </aside>
+    </div>
+  </section>
+
+  <section id="beneficios">
+    <div class="container">
+      <div class="section-head">
+        <h2>¿Qué incluye tu membresía?</h2>
+        <p>Todo lo que necesitas para hacer crecer tu negocio mientras nosotros traemos los clientes.</p>
+      </div>
+
+      <div class="benefits-grid">
+        <article class="benefit">
+          <div class="benefit-icon">✅</div>
+          <h3>Recepción de prospectos y clientes potenciales interesados en tus servicios.</h3>
+        </article>
+        <article class="benefit">
+          <div class="benefit-icon">✅</div>
+          <h3>Generación constante de oportunidades mediante nuestras estrategias de marketing digital.</h3>
+        </article>
+        <article class="benefit">
+          <div class="benefit-icon">✅</div>
+          <h3>Agenda de citas con clientes interesados en contratarte.</h3>
+        </article>
+        <article class="benefit">
+          <div class="benefit-icon">✅</div>
+          <h3>Plataforma web para administrar tus contactos y solicitudes.</h3>
+        </article>
+        <article class="benefit">
+          <div class="benefit-icon">✅</div>
+          <h3>Mayor visibilidad para tu negocio sin necesidad de invertir en publicidad propia.</h3>
+        </article>
       </div>
     </div>
-    <footer>Sustituye <code>YOUR_META_VERIFICATION_CODE</code> en el HTML con el código de Meta antes de verificar.</footer>
-  </main>
+  </section>
+
+  <section>
+    <div class="container value-grid">
+      <div class="value-text">
+        <h2>Nosotros conseguimos los clientes, tú te enfocas en atenderlos</h2>
+        <p>
+          Nuestro equipo se encarga de la promoción, publicidad y captación de clientes para que puedas
+          dedicar tu tiempo a lo que mejor sabes hacer: brindar un excelente servicio y hacer crecer tu negocio.
+        </p>
+      </div>
+      <div class="value-visual">
+        <p class="stat">100%</p>
+        <p class="stat-label">Digital — gestión de contactos y citas en línea</p>
+        <div class="value-divider"></div>
+        <p class="stat">$500</p>
+        <p class="stat-label">MXN al mes — sin invertir en publicidad propia</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="registro">
+    <div class="container">
+      <div class="offer-box">
+        <h2>Oferta de Lanzamiento</h2>
+        <p class="offer-price">Primer mes por solo $500.00 MXN.</p>
+        <p>
+          Empieza hoy mismo y conecta con personas que ya están buscando los servicios que ofreces.
+        </p>
+        <a class="btn btn-primary" href="registro.html">Registrarme ahora</a>
+      </div>
+
+      <p class="renew">
+        ¿Ya tienes cuenta?
+        <a href="renovar.html">Renovar o completar tu pago aquí</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Proveedores+ · lizetortega.github.io</p>
+    </div>
+  </footer>
 </body>
 </html>
