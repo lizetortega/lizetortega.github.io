@@ -33,7 +33,7 @@ jobs:
           cp index.html .nojekyll site/
           if [[ -f CNAME ]]; then cp CNAME site/; fi
           shopt -s nullglob
-          for f in facebook*.html; do
+          for f in *.html; do
             cp "$f" site/
           done
 
